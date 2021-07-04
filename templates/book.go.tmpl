@@ -1,0 +1,8 @@
+# {{ .Title }}
+[[{{.Abbr}}-1|Bắt đầu đọc →]]
+***
+
+{{ $abbr := .Abbr }}
+{{ range $i := .Chapters }}
+[[{{ $abbr }}-{{ $i }}]]
+{{ end }}

@@ -1,0 +1,12 @@
+# {{ .BookTitle }} {{ .CurrentChapter }}
+
+{{ if ne .PrevChapter 0 }}[[{{ .BookAbbr }}-{{ .PrevChapter }}|← {{ .BookTitle }} {{ .PrevChapter }}]] | {{ end }}[[{{ .BookTitle }}]]{{ if ne .NextChapter 0 }} | [[{{ .BookAbbr }}-{{ .NextChapter }}|{{ .BookTitle }} {{ .NextChapter }} →]]{{ end }}
+***
+
+{{ range .Verses }}
+###### c{{ .Number }}
+{{ .Scripture }}
+{{ end }}
+
+***
+{{ if ne .PrevChapter 0 }}[[{{ .BookAbbr }}-{{ .PrevChapter }}|← {{ .BookTitle }} {{ .PrevChapter }}]] | {{ end }}[[{{ .BookTitle }}]]{{ if ne .NextChapter 0 }} | [[{{ .BookAbbr }}-{{ .NextChapter }}|{{ .BookTitle }} {{ .NextChapter }} →]]{{ end }}
